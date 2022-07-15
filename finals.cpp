@@ -49,20 +49,20 @@ int Binary::binaryToDecimal(int binary) {
 
 class Meter {
 public:
-    int meterToFeet(int);
-    int meterToInches(int);
-    int meterToCentimeter(int);
+    double meterToFeet(double);
+    double meterToInches(double);
+    double meterToCentimeter(double);
 };
 
-int Meter::meterToFeet(int meter) {
+double Meter::meterToFeet(double meter) {
     return meter * 3.28084;
 }
 
-int Meter::meterToInches(int meter) {
+double Meter::meterToInches(double meter) {
     return meter * 39.3701;
 }
 
-int Meter::meterToCentimeter(int meter) {
+double Meter::meterToCentimeter(double meter) {
     return meter * 100;
 }
 
@@ -199,28 +199,54 @@ int main() {
                 cout << endl;
                 break;
             case 3:
-                Meter m;
-                int meter;
                 do {
+                Meter m;
+                double meter;
+                int choice3;
+                cout << "Please select an option: " << endl;
+                cout << "1) Meter to Feet" << endl;
+                cout << "2) Meter to Inches" << endl;
+                cout << "3) Meter to Centimeters" << endl;
+                cout << "4) Exit" << endl;
+                cout << endl;
+                cout << "Please enter your choice: ";
+                cin >> choice3;
+                cout << endl;
+                if (choice3 == 1) {
                     cout << "Please enter a number in meters: ";
                     cin >> meter;
                     cout << endl;
                     cout << "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" << endl;
                     cout << "The meter number in feet is: " << m.meterToFeet(meter) << endl;
+                    cout << "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" << endl;
+                    cout << endl;
+                } else if (choice3 == 2) {
+                    cout << "Please enter a number in meters: ";
+                    cin >> meter;
+                    cout << endl;
+                    cout << "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" << endl;
                     cout << "The meter number in inches is: " << m.meterToInches(meter) << endl;
+                    cout << "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" << endl;
+                    cout << endl;
+                } else if (choice3 == 3) {
+                    cout << "Please enter a number in meters: ";
+                    cin >> meter;
+                    cout << endl;
+                    cout << "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" << endl;
                     cout << "The meter number in centimeters is: " << m.meterToCentimeter(meter) << endl;
                     cout << "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" << endl;
                     cout << endl;
-                    cout << "Do you want to convert another? (y/n): ";
-                    cin >> answer;
+                } else if (choice3 == 4) {
                     cout << endl;
-                    if (answer == 'n') {
-                        cout << "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" << endl;
-                        cout << "Going back to main menu..." << endl;
-                        cout << "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" << endl;
-                        break;
-                    }
-                } while (answer == 'y');
+                    cout << "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" << endl;
+                    cout << "Going back to main menu..." << endl;
+                    cout << "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" << endl;
+                    cout << endl;
+                    break;
+                } else {
+                    cout << "Invalid choice." << endl;
+                }
+                } while (choice != 4);
                 break;
             case 4:
                 cout << "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" << endl;
