@@ -53,7 +53,7 @@ int main() {
     double hours, salary, sss, philhealth, pagibig, tax, totalDeductions;
     string employee;
     cout << "Enter Employee Name: ";
-    cin >> employee;
+    getline (cin, employee);
     cout << "Enter Hours Worked: ";
     cin >> hours;
 
