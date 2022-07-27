@@ -1,5 +1,3 @@
-// Payroll system
-
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -115,31 +113,3 @@ int main() {
     return 0;
 
 }
-
-/**
-
-    if (hours <= 40) {
-        cout << "Employee Name: " << employee << endl;
-        cout << "No. of hours worked: " << hours << endl;
-        cout << "Net Income: " << salary << endl;
-        cout << "SSS: " << sss << endl;
-        cout << "P.H.: " << philhealth << endl;
-        cout << "P.I.: " << pagibig << endl;
-        cout << "TAX: " << tax << endl;
-        cout << "Total Deduction: " << totalDeductions << endl;
-        cout << "NET PAY: " << salary - totalDeductions << endl;
-    } else {
-        cout << "Employee Name: " << employee << endl;
-        cout << "No. of hours worked: " << hours << endl;
-        cout << "Net Income: " << salary << endl;
-        cout << "Overtime hour/s: " << hours - 40 << endl;
-        cout << "Overtime Fee/s: " << (hours - 40) * (108.33 * 1.5) << endl;
-        cout << "SSS: " << sss << endl;
-        cout << "P.H.: " << philhealth << endl;
-        cout << "P.I.: " << pagibig << endl;
-        cout << "TAX: " << tax << endl;
-        cout << "Total Deduction: " << totalDeductions << endl;
-        cout << "NET PAY: " << salary - totalDeductions << endl;
-    }
-  
-**/
